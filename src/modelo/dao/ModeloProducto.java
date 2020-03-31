@@ -1,5 +1,6 @@
 package modelo.dao;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -49,7 +50,37 @@ public class ModeloProducto extends Conector{
 	}
 	
 	public Producto get(int id) {
+		
 		//TODO implementar
+		
+		try {
+			PreparedStatement pst=super.conexion.prepareStatement("select * from productos where id=?");
+			pst.setInt(1, id);
+			ResultSet rs=pst.executeQuery();
+			
+			if(rs.next()){
+				
+				Producto producto=new Producto();
+				
+				producto.setId(rs.getInt("id"));
+				producto.setNombre(rs.getString("nombre"));
+				producto.setStock(rs.getInt("stock"));
+				producto.setFecha_compra(rs.getDate("fecha_compra"));
+				producto.setColor(rs.getString("color"));
+				producto.setMade_in(rs.getString("made_in"));
+				producto.setPrecio(rs.getDouble("precio"));
+				producto.setDescuento(rs.getInt("descuento"));
+				producto.setTallas(rs.getString("tallas"));
+				
+				return producto;
+				
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return null;
 	}
 	
