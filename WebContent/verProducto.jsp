@@ -23,43 +23,43 @@
 	<div class="container mt-5 rounded border border-dark">
 		<div class="row">
 			<div class="col">
-				<h1 class="text-center"></h1>
+				<h1 class="text-center">${producto.getNombre()}</h1>
 			</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Stock</div>
-			<div class="col text-center font-weight-bold"></div>
+			<div class="col text-center font-weight-bold">${producto.getStock()}</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Fecha compra</div>
-			<div class="col text-center font-weight-bold"></div>
+			<div class="col text-center font-weight-bold">${producto.getFecha_compra()}</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Color</div>
-			<div class="col text-center font-weight-bold"></div>
+			<div class="col text-center font-weight-bold">${producto.getColor()}</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Made in</div>
-			<div class="col text-center font-weight-bold"></div>
+			<div class="col text-center font-weight-bold">${producto.getMade_in()}</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Precio</div>
-			<div class="col text-center font-weight-bold">euros</div>
+			<div class="col text-center font-weight-bold">${producto.getPrecio()} euros</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Descuento</div>
-			<div class="col text-center font-weight-bold"></div>
+			<div class="col text-center font-weight-bold">${producto.getDescuento()}%</div>
 		</div>
 		<br>
 		<div class="row">
 			<div class="col text-center font-weight-bold">Tallas</div>
-			<div class="col text-center font-weight-bold"></div>
+			<div class="col text-center font-weight-bold">${producto.getTallas()}</div>
 		</div>
 		<br>
 		<br>
