@@ -97,7 +97,7 @@ public class ModeloProducto extends Conector{
 		
 		try {
 			
-			PreparedStatement pstDelete=super.conexion.prepareStatement("delete from producos where id=?");
+			PreparedStatement pstDelete=super.conexion.prepareStatement("delete from productos where id=?");
 			pstDelete.setInt(1, id);
 			pstDelete.execute();
 			
