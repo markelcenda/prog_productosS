@@ -47,7 +47,7 @@
           		<td>${producto.getStock()}</td>
           		<td>${producto.getTallas()}</td>
           		<td>
-          		<a class="btn btn-danger" href="">
+          		<a class="btn btn-danger" href="EliminarProducto?id=${producto.getId()}">
                   <svg class="bi bi-trash" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor"
                     xmlns="http://www.w3.org/2000/svg">
                     <path

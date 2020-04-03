@@ -65,7 +65,7 @@
 		<br>
 		<div class="row">
 			<div class="col text-center"><a href="" type="button" class="btn btn-primary btn-lg text-white">Editar</a></div>
-			<div class="col text-center"><a href="" type="button" class="btn btn-danger btn-lg">Borrar</a></div>
+			<div class="col text-center"><a href="EliminarProducto?id=${producto.getId()}" type="button" class="btn btn-danger btn-lg">Borrar</a></div>
 		</div>
 		<br>
 		<div class="row justify-content-center mb-5">
