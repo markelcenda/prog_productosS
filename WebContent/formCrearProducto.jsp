@@ -30,7 +30,7 @@
     </nav>
     <div class="row">
       <div class="col-8">
-        <form>
+        <form action="InsertarProducto" method="POST">
           <div class="mb-3">
             <div class="form-group">
               <label for="nombre">Nombre</label>
