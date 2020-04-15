@@ -67,7 +67,9 @@
               <label for="madein">Made in</label>
               <select id="madein" name="madein" class="form-control">
                <option>Made in...</option>
-                	<option value="${producto.getMade_in()}"></option>
+                <c:forEach items="${estados }" var="estado">
+                	<option value="${estado.getName()}">${estado.getName()} : ${estado.getContinent()}</option>
+                </c:forEach>
               </select>
             </div>
           </div>
@@ -106,7 +108,7 @@
             </c:forEach>
           </div>
           <button type="submit" class="btn btn-primary">Guardar</button>
-          <a type="submit" href="VerProducto" class="btn btn-success">Cancelar</a>
+          <a type="submit" href="VerProducto?id=${producto.getId()}" class="btn btn-success">Cancelar</a>
         </form>
       </div>
       <div class="col-4">
