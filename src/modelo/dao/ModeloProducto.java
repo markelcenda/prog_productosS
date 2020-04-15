@@ -112,6 +112,25 @@ public class ModeloProducto extends Conector{
 	
 	public void update(Producto producto) {
 		//TODO implementar
+		
+		try {
+			PreparedStatement pstUpdate=super.conexion.prepareStatement("update productos set nombre=?, stock=?, fecha_compra=?, made_in=?, precio=?, descuento=?, tallas=?");
+			producto.setNombre(producto.getNombre());
+			producto.setStock(producto.getStock());
+			producto.setFecha_compra(producto.getFecha_compra());
+			producto.setMade_in(producto.getMade_in());
+			producto.setPrecio(producto.getPrecio());
+			producto.setDescuento(producto.getDescuento());
+			producto.setTallas(producto.getTallas());
+			
+			pstUpdate.executeUpdate();
+			
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 	
 	public void delete(int id) {
